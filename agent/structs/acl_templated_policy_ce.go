@@ -25,6 +25,9 @@ var ACLTemplatedPolicyAPIGateway string
 //go:embed acltemplatedpolicy/policies/ce/nomad-client.hcl
 var ACLTemplatedPolicyNomadClient string
 
+//go:embed acltemplatedpolicy/policies/ce/allow_service_and_path.hcl
+var ACLTemplatedPolicyAndPath string
+
 func (t *ACLToken) TemplatedPolicyList() []*ACLTemplatedPolicy {
 	if len(t.TemplatedPolicies) == 0 {
 		return nil
